@@ -1,3 +1,71 @@
-p {
-  color: yellow;
+body {
+  background-color: #191919;
+}
+
+/*Header styles-------------------*/
+header {
+  background-color: #E02401;
+  width: auto;
+  height: 75px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 3em;
+  float: left;
+  margin: auto auto auto 100px;
+  margin: auto;
+  color: white;
+}
+
+#profile {
+  height: 60px;
+  border-radius: 50%;
+  object-fit: inherit;
+  float: left;
+  padding: 5px;
+}
+
+/*Landing Image styles------------*/
+#landing {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/*Main styles-----------------*/
+main {
+  display: flex;
+}
+
+.sections {
+  width: 25%;
+  height: 200px;
+  background-color: #F0F0F0;
+  text-align: center;
+  margin: 10px;
+  border-top-right-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.sections p {
+  padding: 20px;
+}
+
+.headBoxes {
+  width: 100%;
+  height: 20%;
+  border-top-right-radius: 3%;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  text-align: center;
 }
