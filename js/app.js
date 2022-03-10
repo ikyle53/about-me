@@ -84,65 +84,80 @@ function questionFive() {
 questionFive();
 
 //Name greeting ---------------------------------------------------------------------
-let nameQuestion = prompt('Please tell me your name :)');
+function greetUser() {
+  let nameQuestion = prompt('Please tell me your name :)');
   alert(`Thank you for visiting my About me web page, ${nameQuestion}. Please stay awhile and enjoy the beverages and cookies.`)
+}
+
+greetUser();
 
 //Number guessing game ---------------------------------------------------------------------
-let numGuesses = 0;
-let answer = Math.floor((Math.random() * 10) + 1);
+function guessingGame() {
+  let numGuesses = 0;
+  let answer = Math.floor((Math.random() * 10) + 1);
 
-while(numGuesses < 4) {
-  let guess = prompt('Pick a number between 1 and 10');
-  guess = parseInt(guess);
+  while (numGuesses < 4) {
+    let guess = prompt('Pick a number between 1 and 10');
+    guess = parseInt(guess);
 
-  if (isNaN(guess)) {
-    alert('Please enter a number.')
-  }
+    if (isNaN(guess)) {
+      alert('Please enter a number.')
+    }
 
-  if (guess > answer) {
-    alert(`The guess was too high. Try again~`)
-  } else if (guess < answer) {
-    alert('The guess was too low. Try again~');
-  }  else if (guess === answer) {
-    alert(`Nice job. The answer was ${answer}.`);
-    finalScore++
-    break;
-  }
-  numGuesses++;
+    if (guess > answer) {
+      alert(`The guess was too high. Try again~`)
+    } else if (guess < answer) {
+      alert('The guess was too low. Try again~');
+    } else if (guess === answer) {
+      alert(`Nice job. The answer was ${answer}.`);
+      finalScore++
+      break;
+    }
+    numGuesses++;
 
-  if (numGuesses === 4) {
-    alert(`Unfortunate.. You ran out of turns. The answer was ${answer}`)
-  }
-}
-
-//Guessing answer game -------------------------------------------------------
-let myArray = ['sushi', 'ramen', 'takoyaki', 'dango'];
-
-while (numGuesses < 6) {
-  let arrayGuess = prompt('What is one of my favorite japanese foods?').toLowerCase();
-  let correct = false;
-
-  for (let i = 0; i < myArray.length; i++) {
-    if (arrayGuess === myArray[i]) {
-      i = myArray.length;
-      numGuesses = 6;
-      correct = true;
-    } else if (arrayGuess !== myArray[i]) {
-
+    if (numGuesses === 4) {
+      alert(`Unfortunate.. You ran out of turns. The answer was ${answer}`)
     }
   }
-  if (correct) {
-    alert(`That\'s correct! I like ${myArray[0]}, ${myArray[1]}, ${myArray[2]}, ${myArray[3]}`);
-    finalScore++;
-  } else {
-    alert('Not quite~ Try again');
-  }
+}
 
-  numGuesses++
-  if (numGuesses === 6) {
-    alert(`Better luck next time. You ran out of guesses. I like ${myArray[0]}, ${myArray[1]}, ${myArray[2]}, ${myArray[3]}`)
+guessingGame();
+
+//Guessing answer game -------------------------------------------------------
+function favFood() {
+  let myArray = ['sushi', 'ramen', 'takoyaki', 'dango'];
+
+  let guessLimit = 0;
+
+  while (guessLimit < 6) {
+    let arrayGuess = prompt('What is one of my favorite japanese foods?').toLowerCase();
+    let correct = false;
+
+    for (let i = 0; i < myArray.length; i++) {
+      if (arrayGuess === myArray[i]) {
+        i = myArray.length;
+        guessLimit = 6;
+        correct = true;
+        //  consider setting a break here
+      } else if (arrayGuess !== myArray[i]) {
+        //  consider removing this since it is an empty code block
+      }
+    }
+    if (correct) {
+      alert(`That\'s correct! I like ${myArray[0]}, ${myArray[1]}, ${myArray[2]}, ${myArray[3]}`);
+      finalScore++;
+    } else {
+      alert('Not quite~ Try again');
+    }
+
+    guessLimit++
+    if (guessLimit === 6) {
+      alert(`Better luck next time. You ran out of guesses. I like ${myArray[0]}, ${myArray[1]}, ${myArray[2]}, ${myArray[3]}`)
+    }
   }
 }
+
+favFood();
 
 alert(`Lastly, you were being scored on the number of correct answers. Final Score: ${finalScore}`);
 
