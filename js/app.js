@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 //Score variable for loops
- let finalScore = 0;
+let finalScore = 0;
 
 // //Question 1 ---------------------------------------------------------------------
 function questionOne() {
@@ -23,14 +23,14 @@ questionOne();
 function questionTwo() {
   let question2 = prompt('Is my favorite drink chocolate milk?').toLowerCase();
 
-  if(question2 === 'y' || question2 === 'yes'){
+  if (question2 === 'y' || question2 === 'yes') {
     //console.log('Heck yeah! Chocolate milk is the best! :D');
     alert('Heck yeah! Chocolate milk is the best! :D');
     finalScore++;
   } else {
     //console.log('Oof, there\'s no way I wouldn\'t like chocolate milk :( ');
     alert('Oof, there\'s no way I wouldn\'t like chocolate milk :( ')
-  }    
+  }
 }
 
 questionTwo();
@@ -39,14 +39,14 @@ questionTwo();
 function questionThree() {
   let question3 = prompt('Is my favorite game Guild Wars 2?').toLowerCase();
 
-  if(question3 === 'y' || question3 === 'yes'){
+  if (question3 === 'y' || question3 === 'yes') {
     //console.log('Yes! Guild Wars 2 has been my favorite game for 2 weeks now.');
     alert('Yes! Guild Wars 2 has been my favorite game for 2 weeks now.');
     finalScore++;
   } else {
     //console.log('Wrong! It actually is my favorite game for the past 2 weeks');
     alert('Wrong! It actually is my favorite game for the past 2 weeks');
-  }  
+  }
 }
 
 questionThree();
@@ -55,7 +55,7 @@ questionThree();
 function questionFour() {
   let question4 = prompt('Did I live in Japan for 5 years?').toLowerCase();
 
-  if(question4 === 'y' || question4 === 'yes'){
+  if (question4 === 'y' || question4 === 'yes') {
     //console.log('That\'s right! I spend 5 years living in Okinawa, Japan.');
     alert('That\'s right! I spend 5 years living in Okinawa, Japan.');
     finalScore++;
